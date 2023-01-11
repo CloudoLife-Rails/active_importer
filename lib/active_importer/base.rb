@@ -79,7 +79,9 @@ module ActiveImporter
     end
 
     def self.import(file, options = {})
-      new(file, options).import
+      importer = new(file, options)
+      importer.import
+      importer
     end
 
     #
